@@ -97,17 +97,20 @@ class RestClient
     private $headers = array();
     
     /**
-     * Variable to store the request header as sent
+     * Variable to return error
      * 
      * @var string
      */
-    
+    public $error;
+
     /**
      * Constructor method. Currently there is no instantiation logic.
      *
      * @return void
      */
-    public function __construct() {}
+    public function __construct() {
+        $error = null;
+    }
     
     /**
      * Method to execute GET on server
@@ -507,7 +510,9 @@ class RestClient
             // our curl call failed for some reason
             $curlError = curl_error($this->curl);
             $this->curlTeardown();
-            throw new \Exception('curl call failed with message: "' . $curlError. '"');
+            $this->error = $curlError;
+            return;
+//            throw new \Exception('curl call failed with message: "' . $curlError. '"');
         }
         
         // return CurlHttpResponse
