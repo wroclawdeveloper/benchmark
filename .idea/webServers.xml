@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1ede6222-56d7-4fad-b779-1a9bc1b8cb8f" name="etim.pl" url="http://etim.pl">
+        <fileTransfer host="etim.pl" port="22" rootFolder="/home/users/webmaster/public_html/_sasza/benchmark" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
