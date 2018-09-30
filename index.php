@@ -39,17 +39,29 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['compare'])) {
     /**
      * Multiple parallel requests using RestMultiClient
      */
-    $restMultiClient = new App\RestClientLib\RestMultiClient();
-    $restMultiClient->setRemoteHost($domain)
-        ->setUriBase('/')
-        ->setUseSsl(false)
-        ->setUseSslTestMode(false)
-        ->setBasicAuthCredentials('username', 'password')
-        ->setHeaders(array('Accept' => 'text/html'));
-    // make requests against service
-    $responses = $restMultiClient->get(array_values($compareArr))->getCurlGetinfoArrays();
+//    $restMultiClient = new App\RestClientLib\RestMultiClient();
+//    $restMultiClient->setRemoteHost('www')
+//        ->setUriBase('/')
+//        ->setUseSsl(false)
+//        ->setUseSslTestMode(false)
+//        ->setBasicAuthCredentials('username', 'password')
+//        ->setHeaders(array('Accept' => 'text/html'));
+//    // make requests against service
+//    $responses = $restMultiClient->get(array_values($compareArr))->getCurlGetinfoArrays();
 
-    var_dump($responses);
+    foreach ($compareArr as $compare) {
+        $restClient = new App\RestClientLib\RestClient();
+        $restClient->setRemoteHost($compare)
+            ->setUriBase('/')
+            ->setUseSsl(false)
+            ->setUseSslTestMode(false)
+            ->setBasicAuthCredentials('username', 'password')
+            ->setHeaders(array('Accept' => 'text/html'));
+
+        // make requests against service
+        $responses[] = $restClient->get('')->getCurlGetinfo();
+    }
+
 }
 include 'templates/form.php'
 ?>

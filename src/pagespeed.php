@@ -4,7 +4,6 @@ $key = 'AIzaSyAT1JfqvzIVX_PtgvT2-m8LMBKz8jXJVto';
 $data = json_decode(file_get_contents("https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=$url&key=$key"));
 //var_dump($data);
 $score = $data->ruleGroups->SPEED->score;
-var_dump($score);
 ?>
 <label for="domain"><?= $url ?></label>
 <script>

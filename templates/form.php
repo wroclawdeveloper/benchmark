@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<form name="contactform" method="post" action="index.php">
+<h1>Websites loading time benchmark comparation</h1>
+<form name="form" method="post" action="index.php">
     <table id="table" class="table table-bordered table-striped">
         <tr>
             <td valign="top">
                 <label for="domain">Website *</label>
             </td>
             <td valign="top">
-                <input  type="text" name="domain" maxlength="50" size="30" value="<?= $domain ?>">
+                <input  type="text" name="domain" maxlength="50" size="30" value="<?= $domain ?>" required>
             </td>
             <?php foreach ($render as $k => $val) { ?>
                 <td valign="top">
@@ -16,7 +17,10 @@
                     <input  type="text" name="total_time" maxlength="50" size="30" value="<?= $val ?>" disabled>
                 </td>
                 <td valign="top">
-                    <button type="submit" name="show_details" value="<?= $info['url'] ?>">Show details</button>
+                    <label></label>
+                </td>
+                <td valign="top">
+                    <button type="submit" class="show_details" name="show_details" value="<?= $info['url'] ?>">Show details</button>
                 </td>
             <?php } ?>
         </tr>
@@ -33,7 +37,7 @@
                     <label for="domain">Website to compare</label>
                 </td>
                 <td valign="top">
-                    <input  type="text" name="domain" maxlength="50" size="30" value="<?= $site['redirect_url'] ?>" disabled>
+                    <input  type="text" name="compare[]" maxlength="50" size="30" value="<?= $site['url'] ?>" disabled>
                 </td>
                 <td valign="top">
                     <label for="domain">Total time</label>
@@ -42,7 +46,10 @@
                     <input  type="text" name="total_time" maxlength="50" size="30" value="<?= $site['total_time'] ?>" disabled>
                 </td>
                 <td valign="top">
-                    <button type="submit" name="show_details" value="<?= $site['redirect_url'] ?>">Show details</button>
+                    <label>difference: <?= round(($val-$site['total_time']), 6) ?> </label>
+                </td>
+                <td valign="top">
+                    <button type="submit" class="show_details" name="show_details" value="<?= $site['url'] ?>">Show details</button>
                 </td>
             </tr>
         <?php } ?>
@@ -67,15 +74,15 @@
         window.history.replaceState( null, null, window.location.href );
     }
     function add_tel(){
-        $('#table').append('<table width="450px"><tr><td valign="top"><label for="domain">Website</label></td><td valign="top"><input  type="text" name="compare[]" maxlength="50" size="30" value=""></td></tr></table>');
+        $('#table').append('<tr><td valign="top"><label for="domain">Website</label></td><td valign="top"><input  type="text" name="compare[]" maxlength="50" size="30" value="" required></td></tr>');
     }
-    $( "show_details" ).click(function( event ) {
-        event.preventDefault();
+    $( ".show_details" ).click(function( event ) {
+//        event.preventDefault();
         $.ajax({
             type: "POST",
             url: location.href,
             processdata: false,
-            data: "show_details=" + $(this).val(),
+            data: $('#form').serialize() + "&show_details=" + $(this).val(),
             success: function(data) {
                 $("#postinfo").load(" #postinfo");
             }
