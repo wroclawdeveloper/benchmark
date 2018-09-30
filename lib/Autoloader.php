@@ -14,7 +14,7 @@ class Autoloader {
         $path = str_replace("/lib","",__DIR__);
         foreach ($dirs as $dir) {
             $filename = $path . $dir . end(explode("\\", $className)) . ".php";
-            if (file_exists($filename)) { 
+            if (file_exists($filename)) {
                 require_once($filename);
                 return;
             }
