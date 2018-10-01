@@ -1,10 +1,11 @@
 <?php
 
 define('ROOT_DIRECTORY', __DIR__ !== DIRECTORY_SEPARATOR ? __DIR__ : '');
+require 'vendor/autoload.php';
+require 'lib/Autoloader.php';
 
-require ROOT_DIRECTORY.DIRECTORY_SEPARATOR.'lib/Autoloader.php';
-
-//use App;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 spl_autoload_register('Autoloader::loader');
 
@@ -36,18 +37,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['domain'])) {
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['compare'])) {
 
     $compareArr = filter_var_array($_POST['compare'], FILTER_SANITIZE_URL);
-    /**
-     * Multiple parallel requests using RestMultiClient
-     */
-//    $restMultiClient = new App\RestClientLib\RestMultiClient();
-//    $restMultiClient->setRemoteHost('www')
-//        ->setUriBase('/')
-//        ->setUseSsl(false)
-//        ->setUseSslTestMode(false)
-//        ->setBasicAuthCredentials('username', 'password')
-//        ->setHeaders(array('Accept' => 'text/html'));
-//    // make requests against service
-//    $responses = $restMultiClient->get(array_values($compareArr))->getCurlGetinfoArrays();
 
     foreach ($compareArr as $compare) {
         $restClient = new App\RestClientLib\RestClient();
@@ -63,5 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['compare'])) {
     }
 
 }
+$mail = new PHPMailer(true);
+
 include 'templates/form.php'
 ?>
