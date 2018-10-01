@@ -4,14 +4,13 @@ define('ROOT_DIRECTORY', __DIR__ !== DIRECTORY_SEPARATOR ? __DIR__ : '');
 require 'vendor/autoload.php';
 require 'lib/Autoloader.php';
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
 spl_autoload_register('Autoloader::loader');
 
 // Create new Timing class
 $timing = new App\Timing();
 $timing->setStartTime();
+$time = date('d-M-Y');
+$log = new App\LogWriter('logs/log-' . $time . '.txt');
 
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['domain'])) {
 
@@ -50,9 +49,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['compare'])) {
         // make requests against service
         $responses[] = $restClient->get('')->getCurlGetinfo();
     }
-
+    $timeArr = array_column($responses, 'total_time');
+    $urlArr = array_column($responses, 'url');
+    $max = max($timeArr);
+    $log->info(' execution time for '.$domain.' : '.$info['total_time'].', competitors :'.implode(",",$urlArr).', results :'.implode(",",$timeArr));
+    if($info['total_time']>$max) {
+        include 'src/Mail.php';
+    }
 }
-$mail = new PHPMailer(true);
 
 include 'templates/form.php'
 ?>

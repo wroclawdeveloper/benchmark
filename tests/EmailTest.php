@@ -2,14 +2,17 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
 final class EmailTest extends TestCase
 {
-    public function testCanBeCreatedFromValidEmailAddress(): void
+    public function testValidEmailAddress(): void
     {
+        $mail = new PHPMailer(true);
         $this->assertInstanceOf(
-            Email::class,
-            Email::fromString('user@example.com')
+            PHPMailer::class,
+            $mail
         );
     }
 

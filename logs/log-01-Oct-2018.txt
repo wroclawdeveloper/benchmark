@@ -1,0 +1,4 @@
+[01-Oct-2018 20:56:42] [sasza.webmaster.etim.pl/benchmark/index.php] : [WARNING] - this is the warning message
+[01-Oct-2018 20:56:42] [sasza.webmaster.etim.pl/benchmark/index.php] : [INFO] - this is the info message
+[01-Oct-2018 21:07:13] [sasza.webmaster.etim.pl/benchmark/index.php] : [INFO] -  execution time for http://crm.varico.pl/ : 0.187781
+[01-Oct-2018 21:15:59] : [INFO] -  execution time for https://www.diki.pl/slownik-angielskiego?q=mysteri : 0.057641 competitors :http://sasza.webmaster.etim.pl/yeti420com/index.ph/ results :0.002337

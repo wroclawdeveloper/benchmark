@@ -130,24 +130,6 @@ class RestClient
     }
 
     /**
-     * Method to execute HEAD on server
-     * 
-     * @param string $action
-     * @return CurlHttpResponse
-     * @throws \InvalidArgumentException
-     * @throws \Exception
-     */
-    public function head($action)
-    {
-        $this->validateAction($action);
-        $this->curlSetup();
-        $this->setRequestUrl($action);
-        curl_setopt($this->curl, CURLOPT_CUSTOMREQUEST, 'HEAD');
-        curl_setopt($this->curl, CURLOPT_NOBODY, true);
-        return $this->curlExec();
-    }
-    
-    /**
      * Sets host name of remote server
      * 
      * @param string $host

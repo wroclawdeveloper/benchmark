@@ -4,6 +4,14 @@
     <table id="table" class="table table-bordered table-striped">
         <tr>
             <td valign="top">
+                <label for="email">Email for reports *</label>
+            </td>
+            <td valign="top">
+                <input  type="email" name="email" maxlength="50" size="30" value="flamastertest@gmail.com" required>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
                 <label for="domain">Website *</label>
             </td>
             <td valign="top">

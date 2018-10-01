@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d62b60fa-467f-4584-bf2f-37722c094493" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/benchmark.iml" afterPath="$PROJECT_DIR$/.idea/benchmark.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/RestClientLib/RestClient.php" afterPath="$PROJECT_DIR$/lib/RestClientLib/RestClient.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/form.php" afterPath="$PROJECT_DIR$/templates/form.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/EmailTest.php" afterPath="$PROJECT_DIR$/tests/EmailTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,8 +17,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name=".htaccess" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/.htaccess">
+      <file leaf-file-name="index.php" pinned="true" current-in-tab="true">
+        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="23" column="6" lean-forward="false" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log-01-Oct-2018.txt" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/logs/log-01-Oct-2018.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -25,22 +37,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/index.php">
+      <file leaf-file-name="Autoloader.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/Autoloader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="36" />
+            <state relative-caret-position="306">
+              <caret line="18" column="23" lean-forward="false" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogWriter.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/LogWriter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/templates/form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="59" column="104" lean-forward="false" selection-start-line="59" selection-start-column="101" selection-end-line="59" selection-end-column="104" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mail.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/src/Mail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
-                <element signature="e#143#177#0#PHP" expanded="true" />
+                <element signature="e#6#40#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestClientTest.php" pinned="true" current-in-tab="true">
+      <file leaf-file-name="PHPMailer.php" pinned="true" current-in-tab="false">
+        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/vendor/phpmailer/phpmailer/src/PHPMailer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestClientTest.php" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/tests/RestClientTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="391">
               <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
               <folding />
             </state>
@@ -50,18 +102,8 @@
       <file leaf-file-name="RestClient.php" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/RestClientLib/RestClient.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2735">
-              <caret line="504" column="32" lean-forward="false" selection-start-line="504" selection-start-column="29" selection-end-line="504" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurlHttpResponse.php" pinned="true" current-in-tab="false">
-        <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/RestClientLib/CurlHttpResponse.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="89" column="20" lean-forward="true" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="33" />
+            <state relative-caret-position="117">
+              <caret line="329" column="35" lean-forward="false" selection-start-line="329" selection-start-column="35" selection-end-line="329" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -70,9 +112,11 @@
       <file leaf-file-name="EmailTest.php" pinned="true" current-in-tab="false">
         <entry file="remoteDeploymentFS://&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/tests/EmailTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
-              <folding />
+            <state relative-caret-position="136">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+              <folding>
+                <element signature="e#32#63#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,18 +158,25 @@
         <option value="$PROJECT_DIR$/lib/RestClientLib/CurlHttpResponse.php" />
         <option value="$PROJECT_DIR$/lib/RestClientLib/CurlMultiHttpResponse.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/Autoloader.php" />
         <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/src/Functions.php" />
         <option value="$PROJECT_DIR$/lib/RestClientLib/RestClient.php" />
         <option value="$PROJECT_DIR$/lib/RestClientLib/RestMultiClient.php" />
         <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/RestClientLib/RestMultiClient.php" />
         <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/src/pagespeed.php" />
-        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/templates/form.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/.htaccess" />
         <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/RestClientLib/RestClient.php" />
-        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/index.php" />
         <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/tests/RestClientTest.php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/tests/EmailTest.php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/templates/form.php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/src/Mail.php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/logWriter .php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/Autoloader.php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/LogWriter .php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/lib/LogWriter.php" />
+        <option value="&lt;1ede6222-56d7-4fad-b779-1a9bc1b8cb8f&gt;/index.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/docs/MikeBrant-RestClientLib-RestClient.md" />
       </list>
     </option>
   </component>
@@ -216,16 +267,15 @@
       <workItem from="1538213643655" duration="30440000" />
       <workItem from="1538297946873" duration="8325000" />
       <workItem from="1538331637449" duration="15565000" />
-      <workItem from="1538409021379" duration="3416000" />
+      <workItem from="1538409021379" duration="14676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77031000" />
+    <option name="totallyTimeSpent" value="88291000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19730078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12017995" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -234,19 +284,19 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20416124" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32769832" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31989598" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899868" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -354,6 +404,39 @@
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="459">
+            <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/RestClientLib.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/MikeBrant-RestClientLib-RestClient.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-6120">
+            <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
